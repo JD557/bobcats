@@ -60,15 +60,15 @@ package object openssl {
     object evpDefault extends evp
   }
 
-  private[bobcats] final val crypto = 
-      if (isWindows) platformCompat.cryptoWin64
-      else platformCompat.cryptoDefault
+  private[bobcats] final val crypto =
+    if (isWindows) platformCompat.cryptoWin64
+    else platformCompat.cryptoDefault
 
-  private[bobcats] final val err = 
-      if (isWindows) platformCompat.errWin64
-      else platformCompat.errDefault
+  private[bobcats] final val err =
+    if (isWindows) platformCompat.errWin64
+    else platformCompat.errDefault
 
-  private[bobcats] final val evp = 
-      if (isWindows) platformCompat.evpWin64
-      else platformCompat.evpDefault
+  private[bobcats] final val evp =
+    if (isWindows) platformCompat.evpWin64
+    else platformCompat.evpDefault
 }
